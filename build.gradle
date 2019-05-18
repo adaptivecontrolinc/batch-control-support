@@ -1,0 +1,15 @@
+apply plugin: 'java-library'
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'org.jetbrains:annotations:16.0.2'
+}
+
+sourceCompatibility = "7"
+targetCompatibility = "7"
