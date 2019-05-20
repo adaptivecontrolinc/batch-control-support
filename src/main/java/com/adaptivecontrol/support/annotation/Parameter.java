@@ -4,7 +4,7 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 
 /**
- * Specifies the valid range of values for a parameter variable.
+ * Specifies a valid range of values for a parameter variable.
  */
 @Retention(RetentionPolicy.RUNTIME)
 public @interface Parameter {
