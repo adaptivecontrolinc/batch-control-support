@@ -49,27 +49,27 @@ public interface ACParent {
     /**
      * Gets whether a job is running right now. You can also get this by checking the Running property.
      */
-    boolean isProgramRunning();
+    boolean getIsProgramRunning();
 
     /**
      * Gets whether a job is running right now, but has been paused. You can also get this by checking the Running var.
      */
-    boolean isPaused();
+    boolean getIsPaused();
 
     /**
      * Gets whether there is an unacknowledged signal.
      */
-    boolean isSignalUnacknowledged();
+    boolean getIsSignalUnacknowledged();
 
     /**
      * Gets whether there is an alarm.
      */
-    boolean isAlarmActive();
+    boolean getIsAlarmActive();
 
     /**
      * Gets whether there is an unacknowledged alarm.
      */
-    boolean isAlarmUnacknowledged();
+    boolean getIsAlarmUnacknowledged();
 
     /**
      * Gets a message.
