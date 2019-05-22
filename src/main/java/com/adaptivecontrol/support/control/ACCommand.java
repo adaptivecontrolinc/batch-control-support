@@ -1,6 +1,6 @@
 package com.adaptivecontrol.support.control;
 
-public interface ICommand {
+public interface ACCommand {
     boolean getIsOn();
 
     boolean start(int... params);

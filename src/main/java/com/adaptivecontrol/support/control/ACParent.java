@@ -7,7 +7,7 @@ import java.lang.reflect.Type;
 import java.util.List;
 
 @SuppressWarnings("unused")
-public interface Parent {
+public interface ACParent {
     /**
      * Gets the acknowledgment state  - one of the {@link AckState} values.
      */
