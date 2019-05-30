@@ -385,7 +385,7 @@ public interface ACParent {
      * Creates an instance of RemoteValues that can read and write the variables in a control system.
      */
     @NotNull
-    RemoteValues createRemoteValues(@NotNull String connect, int autoRefreshInterval, @NotNull String[]... properties);
+    RemoteValues createRemoteValues(@NotNull String connect, int autoRefreshInterval, @NotNull String... properties);
 
     /**
      * Logs an event to the control system log file.
