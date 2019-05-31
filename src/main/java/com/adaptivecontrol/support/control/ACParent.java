@@ -1,5 +1,7 @@
 package com.adaptivecontrol.support.control;
 
+import com.adaptivecontrol.support.data.DataTable;
+
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
@@ -316,7 +318,7 @@ public interface ACParent {
      * Executes an SQL statement against the control system database and returns data in a DataTable.
      */
     @NotNull
-    Object dbGetDataTable(@NotNull String sql);
+    DataTable dbGetDataTable(@NotNull String sql);
 
     /**
      * Executes an SQL statement against the control system database.
