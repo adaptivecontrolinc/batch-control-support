@@ -1,18 +1,17 @@
 package com.adaptivecontrol.support.control;
 
 public interface ProgramStep {
-
-//    val command: String
-//    var notes: String
-//    val parameterCount: Int
-//    fun parameter(ofs: Int): String
-//    val totalTime: Long
-//    val elapsed: Long
-//    val extraTime: Long
-//    val temperatureAfter: Int
-//    val ipLevel: Int
-//    val programNumber: String
-//    val stepNumber: Int
-//    val timeInStep: Long
-
+    String getCommand();
+    String getNotes();
+    void setNotes(String value);
+    int getParameterCount();
+    String getParameter(int ofs);
+    long getTotalTime();
+    long getElapsed();
+    long getExtraTime();
+    int getTemperatureAfter();
+    int getIpLevel();
+    String getProgramNumber();
+    int getStepNumber();
+    long getTimeInStep();
 }
