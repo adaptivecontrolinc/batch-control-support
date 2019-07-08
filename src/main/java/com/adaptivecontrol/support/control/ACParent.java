@@ -362,7 +362,7 @@ public interface ACParent {
      * Creates a standard view.
      * 'typeName' should be one of "History", "Variables", "IO" or "Parameters"
      */
-    @NotNull
+    @Nullable
     Object createView(@NotNull String typeName);
 
     /**
@@ -374,13 +374,13 @@ public interface ACParent {
     /**
      * Creates a proxy to a object of type 'ControlCode' found at the given data source.
      */
-    @NotNull
+    @Nullable
     Object createControlCodeProxy(@NotNull Object dataSource);
 
     /**
      * Creates a proxy to a object of given type found at the given data source.
      */
-    @NotNull
+    @Nullable
     Object createProxy(@NotNull Type classToProxy, @NotNull Object dataSource);
 
     /**
