@@ -443,7 +443,7 @@ public interface ACParent {
 
     void setForces(@NotNull String value);
 
-    @NotNull
+    @Nullable
     Object addSequencerToNetwork(@NotNull String name, @NotNull Object component);
 
     void setBlockAll(boolean value);
