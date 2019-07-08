@@ -368,7 +368,7 @@ public interface ACParent {
     /**
      * Creates a history from serialized data.
      */
-    @NotNull
+    @Nullable
     Object createHistory(@Nullable byte[] bytes);
 
     /**
