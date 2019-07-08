@@ -369,7 +369,7 @@ public interface ACParent {
      * Creates a history from serialized data.
      */
     @NotNull
-    Object createHistory(@NotNull byte[] bytes);
+    Object createHistory(@Nullable byte[] bytes);
 
     /**
      * Creates a proxy to a object of type 'ControlCode' found at the given data source.
