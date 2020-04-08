@@ -80,7 +80,7 @@ public interface ACParent {
     String getMessage(int messageNumber);
 
     /**
-     * Gets or sets the running mode - one of the {@link Mode} values.
+     * Gets or sets the running mode - the ordinal of one of the {@link Mode} values.
      */
     int getMode();
 
