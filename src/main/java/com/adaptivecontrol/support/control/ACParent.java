@@ -340,7 +340,7 @@ public interface ACParent {
     /**
      * Starts a job running.
      */
-    void startJob(@NotNull String jobName, @NotNull Object dataId, @NotNull Integer[] programNumbers, @Nullable String[] substituteSteps);
+    void startJob(@NotNull String jobName, @NotNull Object dataId, @NotNull int[] programNumbers, @Nullable String[] substituteSteps);
 
     /**
      * Starts a job running.
