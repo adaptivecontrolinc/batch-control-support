@@ -2,6 +2,7 @@ apply plugin: 'java-library'
 
 allprojects {
     repositories {
+        google()
         jcenter()
     }
 }
@@ -9,6 +10,7 @@ allprojects {
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'org.jetbrains:annotations:16.0.2'
+    implementation "androidx.annotation:annotation:1.1.0"
 }
 
 sourceCompatibility = "7"

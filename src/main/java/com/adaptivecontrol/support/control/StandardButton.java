@@ -1,5 +1,8 @@
 package com.adaptivecontrol.support.control;
 
+import androidx.annotation.Keep;
+
+@Keep
 public final class StandardButton {
     private StandardButton() {
     }

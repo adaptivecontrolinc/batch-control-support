@@ -1,7 +1,9 @@
 package com.adaptivecontrol.support.control;
 
+import androidx.annotation.Keep;
 import org.jetbrains.annotations.Nullable;
 
+@Keep
 public interface ACControlCodeSubSet {
     /**
      * Gets whether a job is running right now.

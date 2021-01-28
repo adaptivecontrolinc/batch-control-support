@@ -1,5 +1,8 @@
 package com.adaptivecontrol.support.control;
 
+import androidx.annotation.Keep;
+
+@Keep
 public interface ProgramStep {
     String getCommand();
     String getNotes();
