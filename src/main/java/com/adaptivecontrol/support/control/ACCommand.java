@@ -6,11 +6,11 @@ import androidx.annotation.Keep;
 public interface ACCommand {
     boolean getIsOn();
 
-    boolean start(int... params);
+    boolean start(int... param);
 
     boolean run();
 
     void cancel();
 
-    void parametersChanged(int... params);
+    void parametersChanged(int... param);
 }
