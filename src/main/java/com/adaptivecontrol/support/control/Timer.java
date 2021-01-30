@@ -1,6 +1,5 @@
 package com.adaptivecontrol.support.control;
 
-@SuppressWarnings("unused")
 public class Timer {
     private int interval_;
     private int startTickCount_;
