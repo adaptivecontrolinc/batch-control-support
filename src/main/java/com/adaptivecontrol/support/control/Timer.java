@@ -23,15 +23,15 @@ public class Timer {
         return (getTimeRemainingMs() + 999) / 1000;
     }
 
-    public Integer _getTimeRemaining() {
-        return getTimeRemaining();
-    }
+//    public Integer _getTimeRemaining() {
+//        return getTimeRemaining();
+//    }
 
     public void setTimeRemaining(int value) {
         setTimeRemainingMs(value * 1000);
     }
 
-    int getTimeRemainingMs() {
+    public int getTimeRemainingMs() {
         int local1;
         int local2;
         if (getFinished()) {
@@ -47,27 +47,27 @@ public class Timer {
         return local1;
     }
 
-    Integer _getTimeRemainingMs() {
-        return getTimeRemainingMs();
-    }
+//    Integer _getTimeRemainingMs() {
+//        return getTimeRemainingMs();
+//    }
 
-    void setTimeRemainingMs(int value) {
+    public void setTimeRemainingMs(int value) {
         interval_ = value;
         startTickCount_ = TickCountModule.TickCount;
         paused_ = false;
         finished_ = false;
     }
 
-    boolean getFinished() {
+    public boolean getFinished() {
         if (!finished_ && !paused_ && TickCountModule.TickCount - startTickCount_ >= interval_) {
             finished_ = true;
         }
         return finished_;
     }
 
-    Boolean _getFinished() {
-        return getFinished();
-    }
+//    Boolean _getFinished() {
+//        return getFinished();
+//    }
 
     protected void checkFinished() {
         if (!paused_ && TickCountModule.TickCount - startTickCount_ >= interval_) {

@@ -1,6 +1,6 @@
 package com.adaptivecontrol.support.control;
 
 
-public final class TickCountModule {
+final class TickCountModule {
     static int TickCount;
 }
