@@ -1,4 +1,4 @@
-package com.adaptivecontrol.support.control;
+package com.adaptivecontrol.runtime;
 
 public class Flasher {
     private int startTime_;

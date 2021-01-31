@@ -1,4 +1,4 @@
-package com.adaptivecontrol.support.control;
+package com.adaptivecontrol.runtime;
 
 public class Smoothing {
     private int[] values_;
