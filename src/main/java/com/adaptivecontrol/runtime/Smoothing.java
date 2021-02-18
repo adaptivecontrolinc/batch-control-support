@@ -1,39 +1,35 @@
 package com.adaptivecontrol.runtime;
 
 public class Smoothing {
-    private int[] values_;
-    private int count_;
-    private int firstOfs_;
-    private long sum_;
+    private int[] values;
+    private int count;
+    private int firstOfs;
+    private long sum;
 
     public Smoothing() {
     }
 
     public int smooth(int value, int smoothing) {
-        int local1 = 0;
-        if (smoothing < 2) {
-            local1 = value;
-        } else {
-            if ((values_ == null) || (values_.length != smoothing)) {
-                values_ = new int[smoothing - 1 + 1];
-                count_ = 0;
-                firstOfs_ = 0;
-            }
-            sum_ += value;
-            if (count_ < smoothing) {
-                values_[count_] = value;
-                count_ += 1;
-            } else {
-                sum_ -= values_[firstOfs_];
-                values_[firstOfs_] = value;
-                firstOfs_ += 1;
-                if (firstOfs_ == count_) {
-                    firstOfs_ = 0;
-                }
-            }
-            local1 = (int) (sum_ / count_);
+        if (smoothing < 2)
+            return value;
+        if ((values == null) || (values.length != smoothing)) {
+            values = new int[smoothing - 1 + 1];
+            count = 0;
+            firstOfs = 0;
         }
-        return local1;
+        sum += value;
+        if (count < smoothing) {
+            values[count] = value;
+            count += 1;
+        } else {
+            sum -= values[firstOfs];
+            values[firstOfs] = value;
+            firstOfs += 1;
+            if (firstOfs == count) {
+                firstOfs = 0;
+            }
+        }
+        return (int) (sum / count);
     }
 
     public short smooth(short value, int smoothing) {

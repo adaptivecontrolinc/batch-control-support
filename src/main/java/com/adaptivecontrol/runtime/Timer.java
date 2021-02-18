@@ -1,11 +1,11 @@
 package com.adaptivecontrol.runtime;
 
 public class Timer {
-    private int interval_;
-    private int startTickCount_;
-    private int pauseTickCount_;
-    private boolean paused_;
-    private boolean finished_;
+    private int interval;
+    private int startTickCount;
+    private int pauseTickCount;
+    private boolean paused;
+    private boolean finished;
 
     public Timer() {
     }
@@ -36,12 +36,12 @@ public class Timer {
         if (getFinished()) {
             local1 = 0;
         } else {
-            if (paused_) {
-                local2 = pauseTickCount_;
+            if (paused) {
+                local2 = pauseTickCount;
             } else {
                 local2 = TickCountModule.TickCount;
             }
-            local1 = interval_ - (local2 - startTickCount_);
+            local1 = interval - (local2 - startTickCount);
         }
         return local1;
     }
@@ -51,17 +51,17 @@ public class Timer {
 //    }
 
     public void setTimeRemainingMs(int value) {
-        interval_ = value;
-        startTickCount_ = TickCountModule.TickCount;
-        paused_ = false;
-        finished_ = false;
+        interval = value;
+        startTickCount = TickCountModule.TickCount;
+        paused = false;
+        finished = false;
     }
 
     public boolean getFinished() {
-        if (!finished_ && !paused_ && TickCountModule.TickCount - startTickCount_ >= interval_) {
-            finished_ = true;
+        if (!finished && !paused && TickCountModule.TickCount - startTickCount >= interval) {
+            finished = true;
         }
-        return finished_;
+        return finished;
     }
 
 //    Boolean _getFinished() {
@@ -69,24 +69,24 @@ public class Timer {
 //    }
 
     protected void checkFinished() {
-        if (!paused_ && TickCountModule.TickCount - startTickCount_ >= interval_) {
-            finished_ = true;
+        if (!paused && TickCountModule.TickCount - startTickCount >= interval) {
+            finished = true;
         }
     }
 
     public void pause() {
-        if (!getFinished() && !paused_) {
-            paused_ = true;
-            pauseTickCount_ = TickCountModule.TickCount;
+        if (!getFinished() && !paused) {
+            paused = true;
+            pauseTickCount = TickCountModule.TickCount;
         }
     }
 
     public void restart() {
         int local1;
-        if (!finished_ && paused_) {
-            local1 = TickCountModule.TickCount - pauseTickCount_;
-            startTickCount_ += local1;
-            paused_ = false;
+        if (!finished && paused) {
+            local1 = TickCountModule.TickCount - pauseTickCount;
+            startTickCount += local1;
+            paused = false;
         }
     }
 

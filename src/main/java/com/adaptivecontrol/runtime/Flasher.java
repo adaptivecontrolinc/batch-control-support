@@ -1,7 +1,7 @@
 package com.adaptivecontrol.runtime;
 
 public class Flasher {
-    private int startTime_;
+    private int startTime;
 
     public Flasher() {
     }
@@ -12,10 +12,10 @@ public class Flasher {
 
     public boolean flash(boolean variable, int onMilliSeconds, int offMilliSeconds) {
         int local1 = 0;
-        if (startTime_ == 0) {
-            startTime_ = TickCountModule.TickCount;
+        if (startTime == 0) {
+            startTime = TickCountModule.TickCount;
         } else {
-            local1 = TickCountModule.TickCount - startTime_;
+            local1 = TickCountModule.TickCount - startTime;
         }
         return local1 % (onMilliSeconds + offMilliSeconds) < onMilliSeconds;
     }

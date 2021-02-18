@@ -1,6 +1,5 @@
 package com.adaptivecontrol.support.control;
 
-import androidx.annotation.Keep;
 
 import com.adaptivecontrol.support.data.DataTable;
 
@@ -10,7 +9,6 @@ import org.jetbrains.annotations.Nullable;
 import java.lang.reflect.Type;
 import java.util.List;
 
-@Keep
 public interface ACParent {
     /**
      * Gets the acknowledgment state  - one of the {@link AckState} values.

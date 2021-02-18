@@ -1,8 +1,5 @@
 package com.adaptivecontrol.support.control;
 
-import androidx.annotation.Keep;
-
-@Keep
 public final class Mode {
     private Mode() {
     }

@@ -1,9 +1,7 @@
 package com.adaptivecontrol.support.control;
 
-import androidx.annotation.Keep;
 import org.jetbrains.annotations.NotNull;
 
-@Keep
 public interface ACControlCode {
     /**
      * Called just once when the control system starts up for the first time.

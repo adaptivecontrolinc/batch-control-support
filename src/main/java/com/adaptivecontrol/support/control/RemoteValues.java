@@ -1,10 +1,8 @@
 package com.adaptivecontrol.support.control;
 
-import androidx.annotation.Keep;
 
 import org.jetbrains.annotations.Nullable;
 
-@Keep
 public interface RemoteValues {
     /**
      * Sets values for properties of given names.

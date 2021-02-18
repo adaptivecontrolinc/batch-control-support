@@ -1,22 +1,22 @@
 package com.adaptivecontrol.runtime;
 
 public class TimerUp {
-    private int startTickCount_;
-    private int pauseInterval_;
-    private boolean started_;
-    private boolean paused_;
+    private int startTickCount;
+    private int pauseInterval;
+    private boolean started;
+    private boolean paused;
 
     public TimerUp() {
     }
 
     public void start() {
-        started_ = true;
-        startTickCount_ = TickCountModule.TickCount;
-        paused_ = false;
+        started = true;
+        startTickCount = TickCountModule.TickCount;
+        paused = false;
     }
 
     public void stop() {
-        started_ = false;
+        started = false;
     }
 
     public int getTimeElapsed() {
@@ -29,12 +29,12 @@ public class TimerUp {
 
     public int getTimeElapsedMs() {
         int local1;
-        if (!started_) {
+        if (!started) {
             local1 = 0;
-        } else if (paused_) {
-            local1 = pauseInterval_;
+        } else if (paused) {
+            local1 = pauseInterval;
         } else {
-            local1 = TickCountModule.TickCount - startTickCount_;
+            local1 = TickCountModule.TickCount - startTickCount;
         }
         return local1;
     }
@@ -44,16 +44,16 @@ public class TimerUp {
 //    }
 
     public void pause() {
-        if (!paused_) {
-            paused_ = true;
-            pauseInterval_ = (TickCountModule.TickCount - startTickCount_);
+        if (!paused) {
+            paused = true;
+            pauseInterval = (TickCountModule.TickCount - startTickCount);
         }
     }
 
     public void restart() {
-        if (paused_) {
-            startTickCount_ = (TickCountModule.TickCount - pauseInterval_);
-            paused_ = false;
+        if (paused) {
+            startTickCount = (TickCountModule.TickCount - pauseInterval);
+            paused = false;
         }
     }
 }
