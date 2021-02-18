@@ -2,6 +2,7 @@ package com.adaptivecontrol.support.control;
 
 
 import com.adaptivecontrol.support.data.DataTable;
+import com.adaptivecontrol.support.ports.Stream;
 
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
@@ -499,4 +500,10 @@ public interface ACParent {
      * Gets the current temperature of the CPU in tenths of a degree C, so 354 is 35.4C
      */
     int getCpuTemperature();
+
+    Stream createSerialPortStream(@NotNull String portName, int baudRate, int parity,
+                                  int dataBits, int stopBits);
+
+    Stream createNetworkPortStream(@NotNull String hostname, int port);
+
 }
