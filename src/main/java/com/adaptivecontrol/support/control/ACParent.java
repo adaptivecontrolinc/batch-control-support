@@ -2,7 +2,7 @@ package com.adaptivecontrol.support.control;
 
 
 import com.adaptivecontrol.support.data.DataTable;
-import com.adaptivecontrol.support.ports.LA60B;
+import com.adaptivecontrol.support.ports.ILA60B;
 import com.adaptivecontrol.support.ports.Stream;
 
 import org.jetbrains.annotations.NotNull;
@@ -507,5 +507,5 @@ public interface ACParent {
 
     Stream newNetworkPort(@NotNull String hostname, int port);
 
-    LA60B newLA60B(@NotNull Stream stream);
+    ILA60B newLA60B(@NotNull Stream stream);
 }
