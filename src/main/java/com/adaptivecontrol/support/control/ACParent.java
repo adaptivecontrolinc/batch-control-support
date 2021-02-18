@@ -2,6 +2,7 @@ package com.adaptivecontrol.support.control;
 
 
 import com.adaptivecontrol.support.data.DataTable;
+import com.adaptivecontrol.support.ports.LA60B;
 import com.adaptivecontrol.support.ports.Stream;
 
 import org.jetbrains.annotations.NotNull;
@@ -501,9 +502,10 @@ public interface ACParent {
      */
     int getCpuTemperature();
 
-    Stream createSerialPortStream(@NotNull String portName, int baudRate, int parity,
+    Stream newSerialPort(@NotNull String portName, int baudRate, int parity,
                                   int dataBits, int stopBits);
 
-    Stream createNetworkPortStream(@NotNull String hostname, int port);
+    Stream newNetworkPort(@NotNull String hostname, int port);
 
+    LA60B newLA60B(@NotNull Stream stream);
 }
