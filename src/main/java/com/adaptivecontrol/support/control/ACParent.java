@@ -2,7 +2,9 @@ package com.adaptivecontrol.support.control;
 
 
 import com.adaptivecontrol.support.data.DataTable;
+import com.adaptivecontrol.support.ports.ILA50B828;
 import com.adaptivecontrol.support.ports.ILA60B;
+import com.adaptivecontrol.support.ports.IModbus;
 import com.adaptivecontrol.support.ports.Stream;
 
 import org.jetbrains.annotations.NotNull;
@@ -507,5 +509,12 @@ public interface ACParent {
 
     Stream newNetworkPort(@NotNull String hostname, int port);
 
+    Stream newModbusTCP(@NotNull String hostname, int port);
+
     ILA60B newLA60B(@NotNull Stream stream);
+
+    ILA50B828 newLA50B828(@NotNull Stream stream);
+
+    IModbus newModbus(@NotNull Stream stream);
+
 }
